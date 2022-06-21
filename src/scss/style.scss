@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Verdana", sans-serif;
+  color: #fff;
+  height: 100vh;
+  background: rgb(1, 0, 83);
+  background: linear-gradient(
+    168deg,
+    rgba(1, 0, 83, 1) 0%,
+    rgba(0, 60, 219, 1) 100%
+  );
+}
+
+main {
+  .section-weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 80%;
+    margin: 10rem auto 0;
+
+    .weather-title {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+
+    // WEATHER INPUT
+
+    .weather-input {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 4rem;
+
+      .input {
+        width: 40rem;
+        height: 3.8rem;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        background: transparent;
+
+        color: #fff;
+        font-size: 2.4rem;
+        padding-left: 1rem;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      #btn {
+        width: 15rem;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        background: transparent;
+        font-size: 2rem;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        transition: all 0.3s;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #fff;
+          color: #000;
+        }
+      }
+    }
+
+    // WEATHER CARD
+
+    .weather-card {
+      display: flex;
+      gap: 5rem;
+      margin-bottom: 4rem;
+
+      .weather-town-card {
+        border: 1px solid #fff;
+        border-radius: 8px;
+        padding: 2rem;
+        height: 27rem;
+
+        .weather-town-name {
+          width: 60rem;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-bottom: 2rem;
+
+          .weather-town-name-icon {
+            .town-name {
+              font-size: 3rem;
+              padding-left: 1.6rem;
+            }
+
+            .town-icon-meteo {
+              display: flex;
+              align-items: center;
+
+              .town-meteo {
+                font-size: 3rem;
+                font-weight: 700;
+              }
+            }
+          }
+
+          .weather-clock-date {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 2rem;
+
+            .town-day {
+              font-size: 2rem;
+
+              &::first-letter {
+                text-transform: uppercase;
+              }
+            }
+
+            .town-date {
+              font-size: 2.2rem;
+            }
+            .town-clock {
+              font-size: 4rem;
+            }
+          }
+        }
+
+        .weather-details {
+          display: flex;
+          gap: 4rem;
+
+          .details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+
+            .title {
+              font-size: 2rem;
+              color: rgba(255, 255, 255, 0.656);
+            }
+
+            .value {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+
+      .container-town-img {
+        height: 27rem;
+        border-radius: 8px;
+        justify-self: center;
+
+        .town-img {
+          border-radius: 8px;
+          height: 27rem;
+        }
+      }
+    }
+  }
+}
+
+.hidden-div {
+  display: none;
+  margin-bottom: 10rem;
+}
+
+// FORECAST
+
+.town-forecast {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 10rem;
+
+  .town-forecast-card {
+    border: 1px solid #fff;
+    border-radius: 8px;
+    width: 20%;
+
+    // width: 20%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .forecast-date {
+      font-size: 1.8rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .flex--i-w {
+      display: flex;
+      align-items: center;
+
+      .town-icon-meteo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        .town-forecast-temp-max {
+          font-size: 3rem;
+        }
+
+        .town-forecast-temp-min {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+// CHART js
+
+#myChart {
+  background-color: #fff;
+  border-radius: 8px;
+}

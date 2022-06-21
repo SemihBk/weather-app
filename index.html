@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/style.min.css" />
+    <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+  
+    <title>Weather API</title>
+  </head>
+  <body>
+    <main>
+      <section class="section-weather">
+        <h1 class="weather-title">WEATHER API</h1>
+        <div class="weather-input">
+          <input name="city" autocomplete="on" placeholder="City" class="input" type="text" />
+          <input type="submit" value="Search" id="btn" />
+        </div>
+
+        <div class="hidden-div">
+          <div class="weather-card">
+            <div class="weather-town-card">
+              <div class="weather-town-name">
+                <div class="weather-town-name-icon">
+                  <h1 class="town-name"></h1>
+                  <div class="town-icon-meteo">
+                    <img
+                    class="icon"
+                    src=""></img>
+                    <p class="town-meteo"></p>
+                  </div>    
+                </div>
+  
+                <div class="weather-clock-date">
+                  <p class="town-clock"></p>
+                  <p class="town-date"></p>
+                  <p class="town-day"></p>
+                </div>
+              </div>
+
+              <div class="weather-details">
+                <div class="wind-details details">
+                  <p class="wind-title title">Wind</p>
+                  <p class="wind value"></p>
+                </div>
+                
+                <div class="humidity-details details">
+                  <p class="humidity-title title">Humidity</p>
+                  <p class="humidity value"></p>
+                </div>
+                
+                <div class="humidity-details details">
+                  <p class="pressure-title title">Pressure</p>
+                  <p class="pressure value"></p>
+                </div>
+                
+               
+              </div>
+              
+            </div>
+
+            <div class="container-town-img">
+              <img class="town-img hidden-img" src="" alt="Town Image">
+            </div>
+            
+  
+            
+          </div>
+
+          <div class="town-forecast">
+            <div class="town-forecast-card">
+              <p class="d-day-one forecast-date"></p>
+              <div class="flex--i-w">
+                <img class="i-day-one hidden-img" src="" alt="Icon">
+                <div class="town-icon-meteo">
+                  <p class="town-forecast-temp-max t-day-one-max"></p>
+                  <p class="town-forecast-temp-min t-day-one-min"></p>
+                </div>
+              </div>
+              
+              
+            </div>
+
+            <div class="town-forecast-card">
+              <p class="d-day-two forecast-date"></p>
+              <div class="flex--i-w">
+                <img class="i-day-two hidden-img" src="" alt="Icon">
+                <div class="town-icon-meteo">
+                  <p class="town-forecast-temp-max t-day-two-max"></p>
+                  <p class="town-forecast-temp-min t-day-two-min"></p>
+                </div>
+              </div>
+              
+            </div>
+
+            <div class="town-forecast-card">
+              <p class="d-day-three forecast-date"></p>
+              <div class="flex--i-w">
+                <img class="i-day-three hidden-img" src="" alt="Icon">
+                <div class="town-icon-meteo">
+                  <p class="town-forecast-temp-max t-day-three-max"></p>
+                  <p class="town-forecast-temp-min t-day-three-min"></p>
+                </div>
+              </div>
+              
+              
+            </div>
+
+            <div class="town-forecast-card">
+              <p class="d-day-four forecast-date"></p>
+              <div class="flex--i-w">
+                <img class="i-day-four hidden-img" src="" alt="Icon">
+                <div class="town-icon-meteo">
+                  <p class="town-forecast-temp-max t-day-four-max"></p>
+                  <p class="town-forecast-temp-min t-day-four-min"></p>
+                </div>
+              </div>
+              
+              
+            </div>
+
+            <div class="town-forecast-card">
+              <p class="d-day-five forecast-date"></p>
+              <div class="flex--i-w">
+                <img class="i-day-five hidden-img" src="" alt="Icon">
+                <div class="town-icon-meteo">
+                  <p class="town-forecast-temp-max t-day-five-max"></p>
+                  <p class="town-forecast-temp-min t-day-five-min"></p>
+                </div>
+              </div>
+              
+              
+            </div>
+          </div>
+          <div class="canva">
+            <canvas id="myChart" style="width:100%;max-width:80%;height: 100%;max-height: 300px;"></canvas>
+          </div>
+        </div>
+
+        
+      
+      </section>
+    </main>
+  </body>
+</html>
