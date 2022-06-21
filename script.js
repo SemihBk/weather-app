@@ -140,7 +140,7 @@ const pressure = document.querySelector(".pressure");
 
 btn.addEventListener("click", function () {
   fetch(
-    "http://api.openweathermap.org/geo/1.0/direct?q=" +
+    "https://api.openweathermap.org/geo/1.0/direct?q=" +
       weatherInput.value +
       "&limit=5&appid=d033e292dbd6613c99ffece5e8a26ba9"
   )
